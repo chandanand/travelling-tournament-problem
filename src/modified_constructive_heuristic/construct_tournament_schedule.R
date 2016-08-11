@@ -1,5 +1,5 @@
 # Modified Constructive Heuristic Module
-ModifiedConstructiveHeuristic <- function(permutation, distance.matrix) {
+ConstructTournamentSchedule <- function(permutation, distance.matrix) {
   # Constructs Double Round Robin Schedule using Modified Constructive
   # Heuristics.
   #

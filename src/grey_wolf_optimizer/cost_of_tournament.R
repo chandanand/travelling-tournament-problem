@@ -10,7 +10,7 @@ CostOfTournament <- function(permutation, no.teams, distance) {
   #   Cost of Permutation.
 
 	# generating schedule for the given permutation
-	schedule <- ModifiedConstructiveHeuristic(permutation, distance)
+	schedule <- ConstructTournamentSchedule(permutation, distance)
 
 	total.cost <- 0
 
