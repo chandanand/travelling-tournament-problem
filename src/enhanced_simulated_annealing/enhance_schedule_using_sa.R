@@ -1,5 +1,13 @@
 # Enhanced Simulated Annealing Module
 EnhanceScheduleUsingSA <- function(schedule, distance.matrix) {
+  # Enhances Schedule Using Simulated Annealing
+  #
+  # Args:
+  #   schedule: DRR schedule.
+  #   distance.matrix: Distance matrix of Stadiums.
+  #
+  # Returns:
+  #   Cost of Tournament and New Schedule.
 
 	no.teams <- nrow(schedule)
 	
@@ -24,10 +32,8 @@ EnhanceScheduleUsingSA <- function(schedule, distance.matrix) {
 
 	while (reheat <= max.reheat) {
 		phase <- 0
-		cat("\nReheat: ", reheat)
 		
 		while (phase <= max.phase) {
-		  cat("\n\tPhase: ", phase)
 			counter <- 0
 
 			while (counter <= max.counter) {
