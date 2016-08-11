@@ -1,5 +1,13 @@
 # GWO to produce best permutations
 GetBestPermutation <- function (distance.matrix) {
+  # Calculates best permutation for scheduling.
+  #
+  # Args:
+  #   distance.matrix: distance matrix of stadiums.
+  #
+  # Returns:
+  #   Best Permutation.
+  
   no.teams <- nrow(distance.matrix)
 
 	population.size <- 50
