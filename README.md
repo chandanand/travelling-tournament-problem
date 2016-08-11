@@ -36,10 +36,11 @@ src/
 ## Running the Project
 
 ```
-git clone https://github.com/chandanand/ttp_with_gwo.git
-setwd('project_directory/src')
-source('main.R')
-Main('data_file_name')
+$ git clone https://github.com/chandanand/ttp_with_gwo.git
+$ R
+> setwd('project_directory/src')
+> source('main.R')
+> Main('data_file_name')
 ```
 
 ## Results Achieved
