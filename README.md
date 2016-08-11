@@ -28,19 +28,19 @@ src/
     ├── construct\_tournament\_schedule.R
     ├── create\_SRR.R
     └── number\_of\_violations.R
-'''
+```
 
 **data** module contains *Distance Matrix* for different tournaments and number of teams.
 
 
 ## Running the Project
 
-'''
+```
 git clone https://github.com/chandanand/ttp_with_gwo.git
 setwd(\'_project\_directory_/src\')
 source(\'main.R\')
 Main(\'_data\_file\_name\')
-'''
+```
 
 ## Creators
 
