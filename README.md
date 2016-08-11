@@ -37,9 +37,9 @@ src/
 
 ```
 git clone https://github.com/chandanand/ttp_with_gwo.git
-setwd(\'_project\_directory_/src\')
-source(\'main.R\')
-Main(\'_data\_file\_name\')
+setwd('_project\_directory_/src')
+source('main.R')
+Main('_data\_file\_name_')
 ```
 
 ## Creators
