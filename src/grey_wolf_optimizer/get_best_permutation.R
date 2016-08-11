@@ -36,9 +36,13 @@ GetBestPermutation <- function (distance.matrix) {
       
       population[i,] <- (population[i,] * (!(flag.upperbound + flag.lowerbound))) + 
                         (no.teams * flag.upperbound) + (1 * flag.lowerbound)
+      
+      
+      # generating schedule for the given permutation
+      schedule <- ConstructTournamentSchedule(population[i,], distance.matrix)
         
       # Calculate objective function for each search agent
-      fitness <- CostOfTournament(population[i,], no.teams, distance.matrix)
+      fitness <- CostOfTournament(schedule, distance.matrix)
         
       if (fitness < alpha.score) {
         alpha.score <- fitness

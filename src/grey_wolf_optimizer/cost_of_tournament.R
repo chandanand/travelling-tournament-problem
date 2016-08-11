@@ -1,18 +1,15 @@
-CostOfTournament <- function(permutation, no.teams, distance) {
-  # Computes cost of a permutation.
+CostOfTournament <- function(schedule, distance) {
+  # Computes cost of a schedule
   #
   # Args:
-  #   permutation: Permutation of teams.
-  #   no.teams: Number of teams in tournament.
+  #   schedule: SRR schedule of tournament
   #   distance.matrix: matrix consisting of distance between teams.
   #
   # Returns:
-  #   Cost of Permutation.
-
-	# generating schedule for the given permutation
-	schedule <- ConstructTournamentSchedule(permutation, distance)
+  #   Cost of Schedule
 
 	total.cost <- 0
+	no.teams <- nrow(distance.matrix)
 
 	schedule <- cbind(c(1:no.teams), schedule, c(1:no.teams))
 
