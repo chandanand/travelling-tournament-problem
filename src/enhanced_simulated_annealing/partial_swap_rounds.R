@@ -1,4 +1,14 @@
 PartialSwapRounds <- function(schedule, ith.team, ith.round, jth.round) {
+  # Swaps Rounds of a team in schedule.
+  #
+  # Args:
+  #   schedule: DRR schedule of tournament.
+  #   ith.team: ith Team.
+  #   ith.round: ith Round
+  #   jth.round: jth Round.
+  #
+  # Returns:
+  #   Schedule after implementing move
 
 	queue <- c(ith.team)
 	i <- 1
