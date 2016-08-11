@@ -42,12 +42,29 @@ source('main.R')
 Main('data_file_name')
 ```
 
+## Results Achieved
+
+| Instances | GWO/ESA | MBBO/ESA | ACO | PSO | BBO/SA |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| NL8 | 39721 | 39721 | 44112 | 43805 | 42568 |
+| NL10 | 58190 | 58769 | 67264 | 66331 | 66121 |
+| NL12 | 110519 | 111064 | 121981 | 121070 | 120040 |
+| NL14 | 182996 | 183631 | 208086 | 210132 | 207848 |
+| NL16 | 253957 | 254242 | 290188 | 291394 | 281963 |
+
+*Disclosure: Results may vary on every run and depending upon parameters*
+
+
 ## Creators
 
 **Chand Anand**
 
 * <https://twitter.com/chandanand>
 * <https://github.com/chandanand>
+
+## References
+
+[Enhanced Heuristic Approach for Traveling Tournament Problem based on Grey Wolf Optimizer](http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=7346685&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D7346685), 8th IEEE International Conference on Contemporary Computing, 2015. Daya Gupta, Chand Anand, Tejas Dewan.
 
 
 ## Copyright and license
