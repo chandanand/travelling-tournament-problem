@@ -10,7 +10,7 @@ ConstructTournamentSchedule <- function(permutation, distance.matrix) {
   # Returns:
   #   Double Round Robin (DRR) Schedule.
 
-	no.teams <- nrow(distance)
+	no.teams <- nrow(distance.matrix)
 
 	# ================= Stage 1: Build 1-factorization ================
 
