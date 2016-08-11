@@ -1,6 +1,6 @@
 # Travelling Tournament Problem using MetaHeuristics 
 
-This project shows an Enhanced Heuristic approach of Grey Wolf Optimizer(GWO) and Enhanced Simulated Annealing in order to find optimum solution for Travelling Tournament Problem(TTP). In this project, I tackle the mirrored version of TTP. I use Prey Proximity Model of Grey Wolf Algorithm to find the best permutation to feed to a Fast Modified Constructive Heuristic algorithm to generate tournament schedules. I integrated an Enhanced Heuristic approach of Simulated Annealing to obtain least Cost Tournament Schedule. I upgrade the population updating step of GWO by using Probabilistic methods and hybridize it with SA to solve TTP and avoid getting stuck in local minima. This proposed hybrid algorithm converges to an optimum solution for TTP.
+This project shows an *Enhanced Heuristic approach* of **Grey Wolf Optimizer(GWO)** and **Enhanced Simulated Annealing(ESA)** in order to find optimum solution for **Travelling Tournament Problem(TTP)**. In this project, I tackle the mirrored version of TTP. I use Prey Proximity Model of Grey Wolf Algorithm to find the best permutation to feed to a Fast Modified Constructive Heuristic algorithm to generate tournament schedules. I integrate an Enhanced Heuristic approach of Simulated Annealing to obtain least Cost Tournament Schedule. I upgrade the population updating step of GWO by using Probabilistic methods and hybridize it with SA to solve TTP and avoid getting stuck in local minima. This proposed hybrid algorithm converges to an _optimum solution for TTP_.
 
 
 ## Code Organization
@@ -28,6 +28,7 @@ src/
     ├── construct\_tournament\_schedule.R
     ├── create\_SRR.R
     └── number\_of\_violations.R
+'''
 
 **data** module contains *Distance Matrix* for different tournaments and number of teams.
 
