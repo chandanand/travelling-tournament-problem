@@ -1,15 +1,15 @@
-Constructconsecutive.matrixMatrix <- function(no.teams, schedule) {
-  # Constructs consecutive.matrix Matrix for Schedule.
+ConstructConsecutiveMatrix <- function(no.teams, schedule) {
+  # Constructs Consecutive Matrix for Schedule.
   #
   # Args:
   #   no.teams: Number of teams in tournament.
   #   schedule: DRR schedule created.
   #
   # Returns:
-  #   consecutive.matrix Matrix.
+  #   Consecutive Matrix.
 	
-	# initialize consecutive.matrix opponents matrix
-	consecutive.matrix.matrix <- matrix(0, no.teams, no.teams)
+	# initialize Consecutive opponents matrix
+	consecutive.matrix <- matrix(0, no.teams, no.teams)
 
 	# construct consecutive.matrix opponents matrix
 	for (team in 1:no.teams) {
