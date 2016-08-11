@@ -36,7 +36,7 @@ src/
 ## Running the Project
 
 ```
-$ git clone https://github.com/chandanand/ttp_with_gwo.git
+$ git clone https://github.com/chandanand/travelling_tournament_problem.git
 $ R
 > setwd('project_directory/src')
 > source('main.R')
