@@ -3,11 +3,15 @@
 rm(list = ls())
 
 ## compiling all the functions
-source('grey_wolf_optimizer/get_random_population.R')
+sapply(list.files(c('grey_wolf_optimizer/', 'modified_constructive_heuristic/'), full.names = TRUE), source)
 
 # distance matrix
 distance.matrix <- read.table('data/data8.txt')
 
-permutation <- GetRandomPopulation(population.size = 50, no.teams = nrow(distance.matrix))
+permutation <- GetBestPermutation(distance.matrix)
 
 print(permutation)
+
+schedule <- ConstructTournamentSchedule(permutation, distance.matrix)
+
+print(schedule)
