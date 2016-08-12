@@ -9,25 +9,25 @@ Within the download you'll find the following directories and files. You'll see 
 
 ```
 src/
-├── enhanced\_simulated\_annealing/
-│   ├── cost\_objective\_function.R
-│   ├── enhance\_schedule\_using\_SA.R
-│   ├── partial\_swap\_rounds.R
-│   ├── swap\_homes.R
-│   ├── swap\_rounds.R
-│   └── swap\_teams.R
-├── grey\_wolf\_optimizer/
-│   ├── cost\_of\_tournament.R
-│   ├── get\_best\_permutation.R
-│   └── get\_random\_population.R
-└── modified\_constructive\_heuristics/
-    ├── assign\_stadiums.R
-    ├── assign\_teams.R
-    ├── assign\_teams\_in\_schedule.R
-    ├── construct\_consecutive\_matrix.R
-    ├── construct\_tournament\_schedule.R
-    ├── create\_SRR.R
-    └── number\_of\_violations.R
+├── enhanced_simulated_annealing/
+│   ├── cost_objective_function.R
+│   ├── enhance_schedule_using_SA.R
+│   ├── partial_swap_rounds.R
+│   ├── swap_homes.R
+│   ├── swap_rounds.R
+│   └── swap_teams.R
+├── grey_wolf_optimizer/
+│   ├── cost_of_tournament.R
+│   ├── get_best_permutation.R
+│   └── get_random_population.R
+└── modified_constructive_heuristics/
+    ├── assign_stadiums.R
+    ├── assign_teams.R
+    ├── assign_teams_in_schedule.R
+    ├── construct_consecutive_matrix.R
+    ├── construct_tournament_schedule.R
+    ├── create_SRR.R
+    └── number_of_violations.R
 ```
 
 **data** module contains *Distance Matrix* for different tournaments and number of teams.
