@@ -1,3 +1,4 @@
+
 AssignStadiums <- function(no.teams, SRR.schedule) {
   # Assigns Home/Away stadiums to matches.
   #
@@ -8,16 +9,31 @@ AssignStadiums <- function(no.teams, SRR.schedule) {
   # Returns:
   #   DRR schedule
 
-	x <- c(-1,1)
-	x <- kronecker(matrix(1,no.teams/2,1),x)
+	#x <- c(-1,1)
+	#x <- kronecker(matrix(1,no.teams/2,1),x)
 	# randomly assigning stadiums in first round
-	SRR.schedule[,1] <- sample(x) * SRR.schedule[,1]
+	#SRR.schedule[,1] <- sample(x) * SRR.schedule[,1]
+	#SRR.schedule[,1] <- sample(x) * abs(SRR.schedule[,1])
 
-
+	# In total, there are n/2 matches per round
+	# Randomly determine whether team with smallest number plays at home
+	home <- sample(c(TRUE, FALSE), no.teams/2, TRUE)
+	matchnr = 1	
+	for (i in 1 : no.teams) {
+		if (i < SRR.schedule[i, 1]) {
+			if (home[matchnr] == FALSE) {
+				SRR.schedule[i, 1] = SRR.schedule[i, 1] * -1
+			}
+			else {
+				SRR.schedule[SRR.schedule[i, 1], 1] = i * -1
+			}
+			++matchnr
+		}
+	}	
 	# first step building a feasible schedule
 
 	# assigning stadiums to first phase
-	for (round in 2:(no.teams-1)) {
+	for (round in 2:(no.teams-2)) {
 		done <- c()
 		for (t1 in 1:no.teams) {
 			t2 <- SRR.schedule[t1, round]
@@ -95,13 +111,26 @@ AssignStadiums <- function(no.teams, SRR.schedule) {
 		}
 	}
 
+	# Randomly assign stadiums in last round
+	home <- sample(c(TRUE, FALSE), no.teams/2, TRUE)
+	matchnr = 1	
+	for (i in 1 : no.teams) {
+		if (i < SRR.schedule[i, no.teams-1]) {
+			if (home[matchnr] == FALSE) {
+				SRR.schedule[i, no.teams-1] = SRR.schedule[i, no.teams-1] * -1
+			}
+			else {
+				SRR.schedule[SRR.schedule[i, no.teams-1], no.teams-1] = i * -1
+			}
+			++matchnr
+		}
+	}	
+
 	# assigning stadiums to second phase
-	DRR.schedule <- cbind(SRR.schedule, (-1)*(SRR.schedule[,1:(no.teams-2)]))
+	DRR.schedule <- cbind(SRR.schedule, (-1)*(SRR.schedule[,1:(no.teams-1)]))
 
-	x <- c(-1,1)
-	x <- kronecker(matrix(1,no.teams/2,1),x)
-	# randomly assigning stadiums in last round
-	DRR.schedule <- cbind(DRR.schedule, sample(x) * abs(SRR.schedule[,no.teams-1]))
-
-	return (DRR.schedule)
+	#x <- c(-1,1)
+	#x <- kronecker(matrix(1,no.teams/2,1),x)
+	## randomly assigning stadiums in last round
+	#DRR.schedule <- cbind(DRR.schedule, sample(x) * abs(SRR.schedule[,no.teams-1]))
 }
