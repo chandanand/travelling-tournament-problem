@@ -9,7 +9,7 @@ CostOfTournament <- function(schedule, distance) {
   #   Cost of Schedule
 
 	total.cost <- 0
-	no.teams <- nrow(distance.matrix)
+	no.teams <- nrow(distance)
 
 	schedule <- cbind(c(1:no.teams), schedule, c(1:no.teams))
 

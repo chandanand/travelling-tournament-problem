@@ -14,22 +14,26 @@ Main <- function(data.file.name) {
   # Returns:
   #   None.
   
-  rm(list = ls())
-  
+
+
   # distance matrix
-  distance.matrix <- read.table('data/' + data.file.name)
+  distance.matrix <- read.table(paste('data/', data.file.name, sep=""))
   
   permutation <- GetBestPermutation(distance.matrix)
   
-  cat("Best permutation: ", permutation)
-  
+  cat("Best permutation:\n")
+  print(permutation); 
+
   schedule <- ConstructTournamentSchedule(permutation, distance.matrix)
   
-  cat("Schedule using Permutation: ", schedule)
+  cat("Schedule using Permutation:\n")
+  print(schedule)
   
   answer <- EnhanceScheduleUsingSA(schedule, distance.matrix)
   
-  cat("Minimum Feasible Cost:", answer[1])
+  cat("Minimum Feasible Cost:\n")
+  print(answer[1])
   
-  cat("New Schedule:", answer[2])
+  cat("New Schedule:")
+  print(answer[2])
 }
