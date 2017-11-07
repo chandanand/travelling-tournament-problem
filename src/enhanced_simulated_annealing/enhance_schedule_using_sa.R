@@ -8,7 +8,7 @@ EnhanceScheduleUsingSA <- function(schedule, distance.matrix) {
   #
   # Returns:
   #   Cost of Tournament and New Schedule.
-
+	best.schedule = schedule
 	no.teams <- nrow(schedule)
 	
 	best.feasible <- Inf
@@ -88,6 +88,10 @@ EnhanceScheduleUsingSA <- function(schedule, distance.matrix) {
 					}
 
 					if (number.best.feasible < best.feasible || number.best.infeasible < best.infeasible) {
+						if (number.best.feasible < best.feasible && NumberOfViolations(schedule) == 0) {
+							cat("New best: ", number.best.feasible, "\n") 
+							best.schedule = schedule
+						}
 						reheat <- 0
 						counter <- 0
 						phase <- 0
@@ -112,5 +116,5 @@ EnhanceScheduleUsingSA <- function(schedule, distance.matrix) {
 		temperature <- 2 * best.temperature
 	}
 
-	return (list(best.feasible, schedule))
+	return (list(best.feasible, best.schedule))
 }
